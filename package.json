@@ -1,0 +1,30 @@
+{
+  "name": "whimsy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "tsx ./scripts/preinstall.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@iconify-json/ic": "^1.1.12",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitejs/plugin-vue-jsx": "^3.0.0",
+    "@vue/test-utils": "^2.2.7",
+    "happy-dom": "^8.1.5",
+    "tsx": "^3.12.2",
+    "unocss": "^0.49.0",
+    "vite": "^4.0.4",
+    "vitest": "^0.28.2",
+    "web-norm": "^1.0.27"
+  },
+  "dependencies": {
+    "vue": "^3.2.45",
+    "whimsy-docs": "workspace:^1.0.0",
+    "whimsy-ui": "workspace:^1.0.0"
+  }
+}

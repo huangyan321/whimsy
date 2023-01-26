@@ -1,0 +1,16 @@
+<!-- @format -->
+
+<h1>Demo</h1>
+<div id="app"></div>
+<script type="module">
+  import { createApp } from 'vue/dist/vue.esm-bundler.js';
+  import WhimsyUI, { WButton } from 'ui/dist/whimsy-ui.mjs';
+
+  createApp({
+    template: `
+      <WButton/>
+    `,
+  })
+    .use(WhimsyUI)
+    .mount('#app');
+</script>
