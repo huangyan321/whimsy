@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../node_modules/.pnpm/vitepress-theme-demoblock@2.0.2/node_modules/vitepress-theme-demoblock/dist/theme/index.mjs"],
-  "sourcesContent": ["import \"./styles/index.css\";\n"],
-  "mappings": ";AAAA,OAAO;",
-  "names": []
-}
