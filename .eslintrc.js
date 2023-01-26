@@ -10,6 +10,7 @@ module.exports = {
     node: true,
     es6: true
   },
+  ignorePatterns: ['!.*', 'dist', 'node_modules', 'cache'],
   plugins: ['prettier'],
   extends: ['plugin:vue/vue3-recommended', 'eslint:recommended', 'plugin:prettier/recommended'],
   rules: {

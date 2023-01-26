@@ -3,4 +3,4 @@
 .babel.config.js
 !.umirc.ts
 dist
-package/docs/cache
+cache

@@ -18,7 +18,9 @@ export default defineConfig({
   plugins: [vue(), vueJsx(), UnoCss()],
   build: {
     rollupOptions,
-    minify: false,
+    minify: 'esbuild',
+    sourcemap: true,
+    cssCodeSplit: true,
     lib: {
       entry: './entry.ts',
       name: 'WhimsyUI',
