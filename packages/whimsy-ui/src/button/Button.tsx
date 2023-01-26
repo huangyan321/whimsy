@@ -1,71 +1,62 @@
 /** @format */
 
-import { defineComponent, PropType } from 'vue';
-import 'uno.css';
+import { defineComponent, PropType } from 'vue'
+import 'uno.css'
 
-export type ISize = 'small' | 'medium' | 'large';
-export type IColor =
-  | 'black'
-  | 'gray'
-  | 'red'
-  | 'yellow'
-  | 'green'
-  | 'blue'
-  | 'indigo'
-  | 'purple'
-  | 'pink';
+export type ISize = 'small' | 'medium' | 'large'
+export type IColor = 'black' | 'gray' | 'red' | 'yellow' | 'green' | 'blue' | 'indigo' | 'purple' | 'pink'
 
 export const props = {
   // 新增
   size: {
     type: String as PropType<ISize>,
-    default: 'medium',
+    default: 'medium'
   },
 
   color: {
     type: String as PropType<IColor>,
-    default: 'blue',
+    default: 'blue'
   },
 
   round: {
     type: Boolean,
-    default: false,
+    default: false
   },
 
   plain: {
     type: Boolean,
-    default: false,
+    default: false
   },
 
   icon: {
     type: String,
-    default: '',
-  },
-} as const;
+    default: ''
+  }
+} as const
 
 export default defineComponent({
   name: 'WButton',
   props,
   setup(props, { slots }) {
-    console.log(`html`, document.querySelector(`#app`)?.innerHTML);
+    console.log(`html`, document.querySelector(`#app`)?.innerHTML)
 
     const size = {
       small: {
         x: '2',
         y: '1',
-        text: 'sm',
+        text: 'sm'
       },
       medium: {
         x: '3',
         y: '1.5',
-        text: 'base',
+        text: 'base'
       },
       large: {
         x: '4',
         y: '2',
-        text: 'lg',
-      },
-    };
+        text: 'lg'
+      }
+    }
 
     return () => (
       <button
@@ -88,6 +79,6 @@ export default defineComponent({
         {props.icon ? <i class={`i-ic-baseline-${props.icon} p-3`}></i> : ''}
         {slots.default ? slots.default() : ''}
       </button>
-    );
-  },
-});
+    )
+  }
+})
