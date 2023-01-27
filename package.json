@@ -4,14 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall": "tsx ./scripts/preinstall.ts",
     "web-norm": "web-norm --noEmoji",
     "prepare": "husky install",
     "pre-commit": "lint-staged",
     "postinstallmac": "git config core.hooksPath .husky && chmod 700 .husky/*",
     "eslint": "eslint --cache --max-warnings 0  \"{packages,mock}/**/*.{vue,ts,js,tsx}\" --fix",
-    "commit": "git add . && git-cz"
+    "commit": "git add . && git-cz",
+    "test:run": "vitest run"
   },
   "keywords": [],
   "author": "",
