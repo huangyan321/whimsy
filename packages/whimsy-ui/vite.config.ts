@@ -44,6 +44,10 @@ export default defineConfig({
     // 支持tsx组件，很关键
     transformMode: {
       web: [/.[tj]sx$/]
+    },
+    coverage: {
+      provider: 'c8', // or 'c8',
+      reporter: ['text', 'json', 'html']
     }
   }
 })
