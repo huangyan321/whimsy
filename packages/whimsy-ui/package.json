@@ -5,6 +5,7 @@
   "main": "dist/whimsy-ui.mjs",
   "scripts": {
     "test": "vitest",
+    "test:run": "vitest run",
     "dev": "vite",
     "build": "vite build"
   },
