@@ -6,6 +6,8 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 
 import UnoCss from './config/unocss'
 
+import dts from 'vite-plugin-dts'
+
 const rollupOptions = {
   external: ['vue'],
   output: {
@@ -15,7 +17,16 @@ const rollupOptions = {
   }
 }
 export default defineConfig({
-  plugins: [vue(), vueJsx(), UnoCss()],
+  plugins: [
+    vue(),
+    vueJsx(),
+    UnoCss(),
+    dts({
+      outputDir: './dist/types',
+      insertTypesEntry: false, // 插入TS 入口
+      copyDtsFiles: true // 是否将源码里的 .d.ts 文件复制到 outputDir
+    })
+  ],
   build: {
     rollupOptions,
     minify: 'esbuild',
@@ -31,8 +42,8 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      ui: process.cwd(),
-      'ui-src': process.cwd() + '/src'
+      root: process.cwd(),
+      '@': process.cwd() + '/src'
     }
   },
   test: {
