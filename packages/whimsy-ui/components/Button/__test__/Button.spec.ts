@@ -1,6 +1,6 @@
 /** @format */
 
-import { WButton } from '../'
+import { WButton } from '..'
 
 import { shallowMount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'

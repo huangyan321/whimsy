@@ -1,7 +1,7 @@
 <!-- @format -->
 
 <template>
-  <w-button color="green" round size="large">buttonss</w-button>
+  <w-button color="green" round size="large">button</w-button>
 </template>
 
 <script setup lang="ts"></script>

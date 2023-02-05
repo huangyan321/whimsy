@@ -1,22 +1,11 @@
 /** @format */
-
-const sidebar = {
-  '/': [
-    { text: '快速开始', link: '/', items: [] },
-    {
-      text: '通用',
-      items: [{ text: 'Button 按钮', link: '/components/button/' }]
-    },
-    { text: '导航', items: [] },
-    { text: '反馈', items: [] },
-    { text: '数据录入', items: [] },
-    { text: '数据展示', items: [] },
-    { text: '布局', items: [] }
-  ]
-}
+import sidebar from './layout/sidebar'
+import nav from './layout/nav'
 const config = {
   themeConfig: {
-    sidebar
+    siteTitle: 'Whimsy',
+    sidebar,
+    nav
   },
   markdown: {
     config: (md) => {
