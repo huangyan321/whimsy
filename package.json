@@ -52,6 +52,9 @@
     "whimsy-docs": "workspace:^1.0.0",
     "whimsy-ui": "workspace:^1.0.0"
   },
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
   "lint-staged": {
     "*.{js,ts,vue,jsx,tsx}": [
       "npm run eslint"
