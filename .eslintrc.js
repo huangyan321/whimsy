@@ -14,6 +14,7 @@ module.exports = {
   plugins: ['prettier'],
   extends: ['plugin:vue/vue3-recommended', 'eslint:recommended', 'plugin:prettier/recommended'],
   rules: {
+    'vue/multi-word-component-names': 'off',
     'vue/order-in-components': 'off',
     'vue/html-self-closing': 'off',
     'vue/require-default-prop': 'off',

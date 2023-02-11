@@ -8,5 +8,14 @@ export default defineConfig({
   plugins: [
     // 添加JSX插件
   ],
-  ssr: { noExternal: ['vitepress-theme-demoblock'] }
+  server: {
+    port: 8000
+  },
+  ssr: { noExternal: ['vitepress-theme-demoblock'] },
+  css: {
+    /* CSS 预处理器 */
+    preprocessorOptions: {
+      scss: {}
+    }
+  }
 })

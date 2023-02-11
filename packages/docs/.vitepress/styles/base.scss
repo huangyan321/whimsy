@@ -1,0 +1,153 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.4;
+  font-size: 16px;
+  text-size-adjust: 100%;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  line-height: 1.4;
+  font-size: 16px;
+  font-weight: 400;
+  direction: ltr;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.25;
+}
+
+p,
+ol,
+ul {
+  margin: 1rem 0;
+  line-height: 1.7;
+}
+
+a,
+area,
+button,
+[role='button'],
+input,
+label,
+select,
+summary,
+textarea {
+  touch-action: manipulation;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+
+  &.header-anchor {
+  }
+}
+
+a.header-anchor {
+  position: absolute;
+  margin-top: 0.125em;
+  margin-left: -0.87em;
+  padding-right: 0.23em;
+  font-size: 0.85em;
+  opacity: 0;
+  &:hover,
+  :focus {
+    text-decoration: none;
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul,
+ol {
+  padding-left: 1.25em;
+}
+
+li > ul,
+li > ol {
+  margin: 0;
+}
+
+blockquote {
+  margin: 1rem 0;
+  padding: 0.25rem 0 0.25rem 1rem;
+  font-size: 1rem;
+}
+
+blockquote > p {
+  margin: 0;
+}
+
+form {
+  margin: 0;
+}
+
+details {
+  summary {
+    margin: 16px 0;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+.el-popover.is-light.translation-popup {
+  border-radius: 8px;
+  padding: 12px 0;
+  min-width: 192px;
+  border: 1px solid transparent;
+  transition: background-color 0.5s;
+}
+
+.custom-block {
+  .custom-block-title {
+    font-weight: 700;
+  }
+
+  p:not(.custom-block-title) {
+    font-size: 0.9rem;
+  }
+  &.tip {
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin: 20px 0;
+  }
+
+  &.warning {
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin: 20px 0;
+  }
+}

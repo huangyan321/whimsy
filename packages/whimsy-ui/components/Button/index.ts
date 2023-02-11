@@ -1,4 +1,4 @@
-import WButton from './src/Button'
+import WButton from './src/button.vue'
 import { App } from 'vue'
 // 导出Button组件
 export { WButton }
