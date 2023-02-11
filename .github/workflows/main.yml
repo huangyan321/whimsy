@@ -39,4 +39,4 @@ jobs:
       - name: Install modules
         run: pnpm install
       - name: Run Test
-        run: cd packages/whimsy-ui && pnpm run test:run
+        run: pnpm run test:run

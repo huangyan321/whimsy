@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "pnpm run -C packages/whimsy-ui dev",
     "build": "pnpm run -C packages/whimsy-ui build",
+    "test": "pnpm run -C packages/whimsy-ui test",
     "docs:dev": "pnpm run -C packages/docs dev",
     "docs:build": "pnpm run -C packages/docs build",
     "preinstall": "tsx ./scripts/preinstall.ts",
