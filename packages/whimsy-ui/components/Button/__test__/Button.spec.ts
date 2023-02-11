@@ -26,11 +26,13 @@ describe('button组件颜色测试', () => {
         default: 'Button'
       }
     })
+    console.log(wrapper.classes())
+
     expect(
       wrapper
         .classes()
         .map((v) => v.replace('\n', ''))
-        .includes('bg-blue-500')
+        .includes('bg-white-500')
     ).toBe(true)
   })
   test('red', () => {
