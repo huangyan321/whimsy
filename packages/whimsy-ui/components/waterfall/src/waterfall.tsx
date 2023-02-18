@@ -27,7 +27,7 @@ export default defineComponent({
       console.log(teleport)
     }
     const waterfallWrapRef = ref<HTMLDivElement>()
-    const waterfallItemRefs = ref<any>([])
+    const waterfallItemRefs: any = []
 
     const getMinIndex = (arr: number[]) => {
       return arr.indexOf(Math.min.apply(null, arr))
@@ -38,16 +38,16 @@ export default defineComponent({
 
     const setImagePos = () => {
       if (!column.value || !gap.value) return
-      const oItemsLength = waterfallItemRefs.value.length
+      const oItemsLength = waterfallItemRefs.length
       const heights: number[] = []
       let itemWidth = 0
       if (waterfallWrapRef.value?.offsetWidth) {
         itemWidth = (waterfallWrapRef.value?.offsetWidth - (column.value - 1) * gap.value) / column.value
         for (let i = 0; i < oItemsLength; i++) {
-          const el: HTMLDivElement = waterfallItemRefs.value[i].$el
+          const el: HTMLDivElement = waterfallItemRefs[i].$el
           el.style.width = itemWidth + 'px'
           if (i < column.value) {
-            heights.push(waterfallItemRefs.value[i].$el.offsetHeight)
+            heights.push(waterfallItemRefs[i].$el.offsetHeight)
             el.style.top = '0'
             if (i % column.value) {
               el.style.left = (el.offsetWidth + gap.value) * (i % column.value) + 'px'
@@ -56,7 +56,7 @@ export default defineComponent({
             }
           } else {
             const minIndex = getMinIndex(heights)
-            const minEl: HTMLDivElement = waterfallItemRefs.value[minIndex].$el
+            const minEl: HTMLDivElement = waterfallItemRefs[minIndex].$el
             el.style.left = minEl.style.left
             el.style.top = heights[minIndex] + gap.value + 'px'
             heights[minIndex] += el.offsetHeight + gap.value
@@ -74,11 +74,11 @@ export default defineComponent({
       emit('trigger', imgItem)
     }
     const render = () => {
-      waterfallItemRefs.value = []
+      waterfallItemRefs.length = 0
       return (
         <div class="waterfall_wrap" ref={waterfallWrapRef}>
           {images.value?.map(({ url }) => (
-            <WaterfallItem ref={(el) => (el ? waterfallItemRefs.value?.push(el) : '')} imgUrl={url} onTrigger={onTrigger} />
+            <WaterfallItem ref={(el) => (el ? waterfallItemRefs?.push(el) : '')} imgUrl={url} onTrigger={onTrigger} />
           ))}
         </div>
       )
