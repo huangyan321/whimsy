@@ -1,0 +1,13 @@
+.waterfall {
+  &_wrap {
+    position: relative;
+    width: 100%;
+  }
+  &_item {
+    position: absolute;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+}
