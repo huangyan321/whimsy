@@ -1,7 +1,8 @@
 module.exports = {
   root: true,
   parserOptions: {
-    ecmaVersion: 11,
+    es2020: true,
+    node: true,
     sourceType: 'module',
     parser: '@typescript-eslint/parser'
   },
@@ -10,7 +11,6 @@ module.exports = {
     node: true,
     es6: true
   },
-  ignorePatterns: ['!.*', 'dist', 'node_modules', 'cache'],
   plugins: ['prettier'],
   extends: ['plugin:vue/vue3-recommended', 'eslint:recommended', 'plugin:prettier/recommended'],
   rules: {
@@ -18,6 +18,7 @@ module.exports = {
     'vue/order-in-components': 'off',
     'vue/html-self-closing': 'off',
     'vue/require-default-prop': 'off',
+    'no-undef': 'off',
     'vue/max-attributes-per-line': [
       0,
       {
@@ -179,8 +180,8 @@ module.exports = {
     'no-this-before-super': 2,
     'no-throw-literal': 2,
     'no-trailing-spaces': 2,
-    'no-undef': 2,
-    'no-undef-init': 2,
+    // 'no-undef': 2,
+    // 'no-undef-init': 2,
     'no-unexpected-multiline': 2,
     'no-unmodified-loop-condition': 2,
     'no-unneeded-ternary': [
@@ -191,13 +192,14 @@ module.exports = {
     ],
     'no-unreachable': 2,
     'no-unsafe-finally': 2,
-    'no-unused-vars': [
-      2,
-      {
-        vars: 'all',
-        args: 'none'
-      }
-    ],
+    // 'no-unused-vars': [
+    //   2,
+    //   {
+    //     vars: 'all',
+    //     args: 'none'
+    //   }
+    // ],
+    'no-unused-vars': 'off',
     'no-useless-call': 2,
     'no-useless-computed-key': 2,
     'no-useless-constructor': 2,
@@ -249,7 +251,6 @@ module.exports = {
     'yield-star-spacing': [2, 'both'],
     yoda: [2, 'never'],
     'prefer-const': 2,
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     'object-curly-spacing': [
       0,
       'always',
@@ -259,4 +260,4 @@ module.exports = {
     ],
     'array-bracket-spacing': [2, 'never']
   }
-}
+};

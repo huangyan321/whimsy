@@ -1,5 +1,4 @@
-module.exports = {
-  extends: ['@commitlint/config-angular'],
+export default {
   parserPreset: {
     parserOpts: {
       headerPattern: /^(.*?)(?:\((.*)\))?:?\s(.*)$/,
@@ -9,7 +8,7 @@ module.exports = {
   rules: {
     'type-case': [0],
     'type-empty': [2, 'never'],
-    'type-enum': [2, 'always', ['build', 'ci', 'docs', 'feat', 'fix', 'perf', 'refactor', 'revert', 'style', 'test']],
+    'type-enum': [2, 'always', ['build', 'ci', 'docs', 'feat', 'fix', 'perf', 'refactor', 'revert', 'style', 'test', 'chore']],
     'scope-empty': [2, 'never'],
     'subject-empty': [2, 'never']
   },
@@ -30,54 +29,47 @@ module.exports = {
         enum: {
           feat: {
             description: '增加新功能',
-            title: 'Features',
-            emoji: '🌟'
+            title: 'feat'
           },
           fix: {
             description: '修复bug',
-            title: 'Bug Fixes',
-            emoji: '🐛'
+            title: 'fix'
           },
           docs: {
-            description: '修改文档',
-            title: 'Documentation',
-            emoji: '📝'
-          },
-          style: {
-            description: '样式修改不影响逻辑',
-            title: 'Styles',
-            emoji: '💎'
-          },
-          refactor: {
-            description: '功能/代码重构',
-            title: 'Code Refactoring',
-            emoji: '🌠'
+            description: '文档修改',
+            title: 'docs'
           },
           perf: {
             description: '性能优化',
-            title: 'Performance Improvements',
-            emoji: '🚀'
+            title: 'perf'
           },
-          test: {
-            description: '增删测试',
-            title: 'Tests',
-            emoji: '🚨'
-          },
-          build: {
-            description: '打包',
-            title: '打包',
-            emoji: '📦'
-          },
-          ci: {
-            description: 'CI部署',
-            title: 'Continuous Integrations',
-            emoji: '⚙️'
-          },
-
           revert: {
             description: '版本回退',
-            title: 'Reverts',
-            emoji: '🔂'
+            title: 'reverts'
+          },
+          ci: {
+            description: 'CICD 集成相关',
+            title: 'ci'
+          },
+          style: {
+            description: '不影响程序逻辑的代码修改',
+            title: 'style'
+          },
+          refactor: {
+            description: '功能/代码重构',
+            title: 'refactor'
+          },
+          test: {
+            description: '添加测试代码',
+            title: 'test'
+          },
+          build: {
+            description: '影响项目构建或依赖修改',
+            title: 'build'
+          },
+          chore: {
+            description: '不属于以上类型的其他类型(日常事务)',
+            title: 'chore'
           }
         }
       },
@@ -110,4 +102,4 @@ module.exports = {
       }
     }
   }
-}
+};
