@@ -1,12 +1,12 @@
 /** @format */
 /// <reference types="vitest" />
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 
-import UnoCss from './config/uno.config'
+import UnoCss from './config/uno.config';
 
-import dts from 'vite-plugin-dts'
+import dts from 'vite-plugin-dts';
 
 const rollupOptions = {
   external: ['vue'],
@@ -15,7 +15,7 @@ const rollupOptions = {
       vue: 'Vue'
     }
   }
-}
+};
 export default defineConfig({
   plugins: [
     vue(),
@@ -61,4 +61,4 @@ export default defineConfig({
       reporter: ['text', 'json', 'html']
     }
   }
-})
+});

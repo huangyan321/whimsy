@@ -1,8 +1,8 @@
 /** @format */
 
-import { createApp } from 'vue'
+import { createApp } from 'vue';
 
-import WhimsyUI from './entry'
-import App from './App.vue'
+import WhimsyUI from './entry';
+import App from './App.vue';
 
-createApp(App).use(WhimsyUI).mount('#app')
+createApp(App).use(WhimsyUI).mount('#app');
